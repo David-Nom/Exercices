@@ -16,6 +16,7 @@ header {
 
 /* Titre principal */
 h1 {
+    margin: 10%;
     text-align: center;
     margin-bottom: 10px;
 }
