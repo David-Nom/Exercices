@@ -113,3 +113,57 @@ footer a {
 main {
     text-align: center;
 }
+
+
+
+   /* Style global du menu HAUT DE PAGE */
+    .nav1 {
+      background: #222;
+      padding: 15px 0;
+      position: fixed;   /* reste en haut de la page */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /*importance*/
+    }
+
+    .nav1 ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+      padding: 0;
+    }
+
+    .nav1 ul li {
+      margin: 0 20px;
+    }
+
+    .nav1 ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    /* Effet de soulignement avec transition */
+    .nav1 ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #ff6600;
+      transition: width 0.3s ease;
+    }
+
+    .nav1 ul li a:hover {
+      color: #ff6600;
+    }
+
+    .nav1 ul li a:hover::after {
+      width: 100%;
+    }
