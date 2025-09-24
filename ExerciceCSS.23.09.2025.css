@@ -1,61 +1,61 @@
 /* Style global */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
-    color: #333;
+    font-family: Arial, sans-serif; /*Changement police*/
+    margin: 0; /*ESPACE INTERIEUR autour de l'élément*/
+    padding: 0; /*ESPACE EXETERIEUR*/
+    background-color: #fafafa; /*COLOR FOND*/
+    color: #333; /*COLOR POLICE*/
 }
 
-/* Header */
+/* Header EN TETE*/
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffe082;
+    text-align: center; /*ALIGNERA AU MILLIEUX*/
+    padding: 20px; /*ESPACE EXTERIEUR autour de l'élément*/
+    background-color: #ffe082; /*FOND COLOR*/
 }
 
 /* Titre principal */
 h1 {
-    margin: 10%;
-    text-align: center;
-    margin-bottom: 10px;
+    margin: 10%;/*ESPACE INTERIEUR autour de l'élément*/
+    text-align: center; /*ALIGNERA AU MILLIEUX*/
+    margin-bottom: 10px; /*espace autour de l'élément en bas*/
 }
 
 /* Section menu */
 section {
-    padding: 50px;
-    background-color: #ffe082;
-    text-align: center;
+    padding: 50px;/*ESPACE EXTERIEUR autour de l'élément*/
+    background-color: #ffe082;/*couleur fond de page*/
+    text-align: center; /*ALIGNERA AU MILLIEUX*/
 }
 
 /* Images du menu */
 .menu-nav {
-    display: flex;
+    display: flex;/**/
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /*espace entre les éléments*/
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 20px;/*espace autour de l'élément en bas*/
 }
 
 .menu-nav img {
-    margin:10%;
-    width: 20%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin:10%;/*autour de l'élément*/
+    width: 20%; /*Largeur*/
+    max-width: 150px;/*largeur Max que le contenu doit respécter*/
+    height: auto;/*Hauteur automatique*/
+    border-radius: 8px; /*arondire les angles*/
+    transition: transform 0.3s, box-shadow 0.3s; /*effect*/
 }
 
 .menu-nav img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: scale(1.05);/*zoom*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /*Ombre*/
 }
 
 /* Formulaire */
 form {
-   width: 100%;
-    margin: 0 auto;
-    background-color: #fffde7;
+   width: 100%;/*Largeur*/
+    margin: 0 auto; 
+    background-color: #fffde7;/*couleur fond de page*/
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -71,11 +71,11 @@ fieldset {
 legend {
     font-weight: bold;
 }
-/*Formulaire*/
+/*Formulaire ENCADRE LES INPUT TEXT, EMAIL, SELECT*/
 input[type="text"],
 input[type="email"],
 select {
-    width: 90%;
+    width: 90%;/**/
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #aaa;
@@ -168,3 +168,64 @@ main {
     .nav1 ul li a:hover::after {
       width: 100%;
     }
+    .Police {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablettes : max 1024px */
+@media (max-width: 1024px) {
+  .menu-nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .menu-nav img {
+    width: 30%;
+    max-width: 200px;
+    margin: 5%;
+  }
+  form {
+    width: 95%;
+  }
+}
+
+/* Mobiles : max 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  .menu-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-nav img {
+    width: 60%;
+    margin: 10px 0;
+  }
+  form {
+    padding: 15px;
+  }
+  /* nav fixe: évite que le contenu passe dessous si besoin */
+  body { padding-top: 70px; }
+}
+
+/* Très petits mobiles : max 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .nav1 ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .menu-nav img {
+    width: 80%;
+  }
+  input[type="submit"] {
+    width: 100%;
+  }
+}

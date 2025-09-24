@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head><!--En tête-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./Image exercice/eats.png"><!--Icone-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="./ExerciceCSS.23.09.2025.css"><!--Chemin direction -->
-    <title>Eats</title>
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./Image exercice/eats.png"><!--Icone-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./ExerciceCSS.23.09.2025.css"><!--Chemin direction -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--Google police-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Honk&display=swap" rel="stylesheet">
+  <title>Eats</title><!--titre page-->
 </head>
-<body> <div class="nav1"><ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-</div>
-    <header class="text-center"><!--Boostrap-->
-  </nav>
-    <h1>Eats</h1>
-    <img src="./Image exercice/eats.png" alt="ImageEcoeats1">
-    </header>
-    <section>
-        <h2 class="card-body">Menu:</h2>
-</section>
-  <div class="container"><!--Boostrap-->
-  <div class="row">
-    <div class="col bg-primary text-white border-dark g-2 text-center">Hamburgeur</div><!--3 class boostrap diférente-->
-    <div class="col bg-light text-dark border g-2 text-center">Croque-m</div>
-    <div class="col bg-danger text-white border-dark g-2 text-center">Croque-N</div>
-  </div>
-</div>
-        <nav class="menu-nav text-center"><!--Menu-->
-            <img src="./Image exercice/eats.png" alt="ImageEcoeats2" title="Hamburgeur">
-            <img src="./Image exercice/eats.png" alt="ImageEcoeats3" title="Croque-m">
-            <img src="./Image exercice/eats.png" alt="ImageEcoeats4" title="Croque-N">
-        </nav>
-        <p class="text-center"> Clicker sur Commande pour les Commandes Eats</p>
-    </section>
-    <main class="text-center">
-        <h3>Formulaire de contact:</h3>
-        <form action="post" id="form" class="d-flex justify-content-center align-items-center vh-100 form-group"><!--formulaire de contact-->
-            <fieldset>
-                <legend class="text-primary text-center">Remplisez les informations</legend>
-                <!--fielset= encadrement et legend = titre au milieux de l'encadrement-->
-                <br>
-                <br>
-                <input type="text" name="nom" id="nom" placeholder="Entrez votre nom">
-                <!--placeholder : texte d’exemple affiché quand le champ est vide.-->
-                <!--name= permet de relier a une class-->
-                <br>
-                <br>
-                <br>
-                <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom">
-                <!--placeholder : texte d’exemple affiché quand le champ est vide.-->
-                <!--name= permet de relier a une class-->
-                <br>
-                <br>
-                <br>
-                <input type="email" name="email" id="email" placeholder="Email"> <!--email-->
-                <br>
-                <br>
-                <br>
-                <!--checkbox = plussieur choix possible--> <!--value= valeur -->
-                <br>
-                 </fieldset>
-                <fieldset>
-                    <legend>Choix</legend>
-                    <input id="Hamburgeur" type="radio"><label for="Hamburgeur">Hamburgeur</label> <!---->
-                    <br>
-                    <input id="Croque-m" type="radio"><label for="Croque-m">Croque-m</label>
-                    <br>
-                    <input id="Croque-N" type="radio"><label for="Croque-N">Croque-N</label>
-                    <br>
-<select class="text-center"><!--select=permet de rajouter une liste qui défile-->
-                <option value="Enfant"> Enfant </option><!--option=permet de rajouter des choix dans la liste (ne pas oublier de ne pas les laisser vide)-->
-                <option value="Adulte">Adulte</option><!---->
-                <option value="Piter-pan">je ne suis pas encore certain</option>
-                   
-                   
-</select>
- <input type="submit" class="btn btn-success text-center"/><!--Bouton envoyer-->
-                    <br>
 
-<br>
-<br>
-  </fieldset>
+<body>
+  <!-- NAV FIXE -->
+  <div class="nav1" role="navigation" aria-label="Navigation principale">
+    <ul>
+      <li>
+        <a href="#">
+          Accueil
+          <img src="./Image exercice/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Acceuil"><!--acceuil-->
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Services
+          <img src="./Image exercice/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Services"><!--services-->
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Contact
+          <img src="./Image exercice/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Contact"><!--contact-->
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ENTÊTE -->
+  <header class="text-center"><!--boostrap-->
+    <h1>Eats</h1>
+    <img src="./Image exercice/eats.png" alt="Logo Eats">
+  </header>
+
+  <!-- SECTION CONTENU -->
+  <section>
+    <h2 class="card-body Police">Menu:</h2><!--Boostrap-->
+
+    <div class="container"><!--Boostrap-->
+      <div class="row g-2">
+        <div class="col bg-primary text-white border-dark text-center">Hamburgeur</div>
+        <div class="col bg-light text-dark border text-center">Croque-m</div>
+        <div class="col bg-danger text-white border-dark text-center">Croque-N</div>
+      </div>
+    </div>
+
+    <nav class="menu-nav text-center" ><!--boostrap-->
+      <img src="./Image exercice/eats.png" alt="Hamburgeur" title="Hamburgeur">
+      <img src="./Image exercice/eats.png" alt="Croque-m" title="Croque-m">
+      <img src="./Image exercice/eats.png" alt="Croque-N" title="Croque-N">
+    </nav>
+
+    <p class="text-center">Clicker sur Commande pour les Commandes Eats</p>aria-label="Menu visuel"
+  </section>
+
+  <!-- FORMULAIRE Boostrap-->
+  <main class="text-center">
+    <h3 class="Police">Formulaire de contact:</h3>
+    <form method="post" action="#" id="form" class="d-flex justify-content-center align-items-center form-group">
+      <fieldset>
+        <legend class="text-primary text-center">Remplissez les informations</legend>
+
+        <input type="text" name="nom" id="nom" placeholder="Entrez votre nom">
+        <br><br>
+
+        <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom">
+        <br><br>
+
+        <input type="email" name="email" id="email" placeholder="Email">
+      </fieldset>
+
+      <fieldset>
+        <legend>Choix</legend>
+
+        <input id="Hamburgeur" type="radio" name="choix" value="Hamburgeur">
+        <label for="Hamburgeur">Hamburgeur</label>
+        <br>
+
+        <input id="Croque-m" type="radio" name="choix" value="Croque-m">
+        <label for="Croque-m">Croque-m</label>
+        <br>
+
+        <input id="Croque-N" type="radio" name="choix" value="Croque-N">
+        <label for="Croque-N">Croque-N</label>
+        <br><br>
+
+        <select class="text-center" name="taille">
+          <option value="Enfant">Enfant</option>
+          <option value="Adulte">Adulte</option>
+          <option value="Piter-pan">je ne suis pas encore certain</option>
+        </select>
+
+        <br><br>
+        <input type="submit" class="btn btn-success text-center" value="Envoyer">
+      </fieldset>
     </form>
-    </main>
-    <footer>
-        <a href="">X</a>
-        <a href="">Yt</a>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer>
+    <!--lien redirectionel-->
+    <a href="">X</a>
+    <a href="">Yt</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
