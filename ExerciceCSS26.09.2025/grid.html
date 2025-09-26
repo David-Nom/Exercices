@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grille CSS</title>
+  <style>
+    :root{
+      --gap: 16px; /* Espace entre les éléments de la grille */
+      --card-bg: #111;  /* couleur */
+      --card-br: 12px;  /* taile écriture */
+      --stroke: #2bdc2b; /* juste pour rappeler le croquis */
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin:0; /* pas de margine */
+      min-height:100svh;
+      background:#0e0e0e;  /* couleur de fond */
+      color:#eaeaea; /* couleurs d'écriture */
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      padding: clamp(12px, 2vw, 24px); /* espace éxérieur */
+    }
+
+    /* CONTENEUR PRINCIPAL  */
+    .grid{ /*css grid*/
+      display:grid; /*choix du display*/
+      gap: var(--gap); /*espace entre les éléments*/
+      grid-template-columns: 360px 1fr 320px;      /* 3 colonnes : img | description | sidebar */
+      grid-template-rows: auto 1fr auto;           /* prix/side s’adapte, puis le reste, puis footer */
+      grid-template-areas:"img desc side""img desc side"
+        "footer footer footer";
+      align-items:start; 
+    }
+
+    /* === BLOCS (zones 1–7) =============================================== */
+    .card{
+      background: var(--card-bg);
+      border: 1px solid #1d1d1d; /*bordure de la card*/
+      border-radius: var(--card-br);
+      padding: 16px;   /* Espace éxtérieur*/
+      position:relative;
+    }
+    .stroke{ 
+        outline: 2px dashed var(--stroke); 
+        outline-offset: -6px; 
+    } /* optionnel : rappel visuel croquis */
+
+    .img     { 
+        grid-area: img;    
+         min-height: 260px; 
+         display:grid; 
+         place-items:center; 
+        }
+    .desc    { 
+        grid-area: desc;   
+        min-height: 260px; 
+    }
+    .footer  { 
+    grid-area: footer;  
+    min-height: 64px;
+    display:grid; 
+    place-items:center; 
+}
+
+    /* === SIDEBAR : zones 3–6 ============================================ */
+    .side{
+      grid-area: side;
+      display:grid;
+      gap: var(--gap);
+      grid-template-rows: auto auto auto 1fr; /* 3,4,5 auto puis 6 prend le reste */
+    }
+    .price{ /* zone 3 */
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:1.1rem; font-weight:700;
+    }
+    .qty{   /* zone 4 */
+      display:grid; grid-template-columns: 1fr auto; gap: 8px; align-items:center;
+    }
+    .qty input{
+      width:100%; padding:10px 12px; border-radius:10px; border:1px solid #2a2a2a; background:#0b0b0b; color:#fff;
+    }
+    .qty .arrows{
+      display:flex; flex-direction:column;
+    }
+    .btn{
+      padding:10px 12px; border-radius:10px; border:1px solid #2a2a2a; background:#141414; color:#fff; cursor:pointer;
+    }
+    .note{  /* zone 5 */
+      min-height:56px; display:grid; place-items:center;
+    }
+    .extra{ /* zone 6 */
+      min-height:80px;
+    }
+
+    /* === RÉASPONSIVE ====================================================== */
+    @media (max-width: 1024px){
+      .grid{
+        grid-template-columns: 320px 1fr;         /* image + contenu (desc+sidebar dessous) */
+        grid-template-areas:
+          "img desc"
+          "img side"
+          "footer footer";
+      }
+    }
+    @media (max-width: 720px){
+      .grid{
+        grid-template-columns: 1fr;               /* tout en pile */
+        grid-template-areas:
+          "img"
+          "desc"
+          "side"
+          "footer";
+      }
+      .img{ min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="grid">
+    <!-- 1 : IMG -->
+    <section class="card img stroke">
+      <span>IMG (1)</span>
+    </section>
+
+    <!-- 2 : DESCRIPTION -->
+    <section class="card desc stroke">
+      <h2>Description (2)</h2>
+      <p>
+        Place ici ton texte de description du produit. Ce bloc occupe toute la colonne centrale,
+        pendant que l’image reste à gauche et les infos (prix, quantité, etc.) à droite.
+      </p>
+    </section>
+
+    <!-- 3–6 : SIDEBAR -->
+    <aside class="side">
+      <!-- 3 : PRIX -->
+      <div class="card price stroke">
+        <span>PRIX</span>
+        <span>49,90 €</span>
+      </div>
+
+      <!-- 4 : QUANTITÉ -->
+      <div class="card qty stroke">
+        <input type="number" min="1" value="1" aria-label="Quantité">
+        <div class="arrows">
+          <button class="btn" aria-label="Augmenter">▲</button>
+          <button class="btn" aria-label="Diminuer">▼</button>
+        </div>
+      </div>
+
+      <!-- 5 : BOUTON / INFO -->
+      <div class="card note stroke">
+        <button class="btn">Ajouter au panier (5)</button>
+      </div>
+
+      <!-- 6 : CONTENU LIBRE -->
+      <div class="card extra stroke">
+        <strong>Bloc (6)</strong><br>
+        Détails, livraison, badges, etc.
+      </div>
+    </aside>
+
+    <!-- 7 : BANDEAU PLEINE LARGEUR -->
+    <footer class="card footer stroke">
+      <strong>Footer / Bandeau (7)</strong>
+    </footer>
+  </main>
+
+</body>
+</html>

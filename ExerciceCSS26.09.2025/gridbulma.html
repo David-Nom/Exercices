@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>grid Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Bulma (CDN) -->
+</head>
+<body class="has-background-dark"><!--fond black-->
+  <section class="section pt-5 pb-6">  <!-- conteneur -->
+    <div class="container">
+
+      <!-- grille principale -->
+      <div class="columns is-variable is-5 is-multiline">
+        <!-- 1 : IMG -->
+        <div class="column is-12-mobile is-4-tablet is-4-desktop">
+          <div class="box stroke min-img has-background-black-ter has-text-white-ter is-flex is-justify-content-center is-align-items-center">
+            IMG (1)
+          </div>
+        </div>
+
+        <!-- 2 : DESCRIPTION -->
+        <div class="column is-12-mobile is-8-tablet is-5-desktop">
+          <div class="box stroke min-desc has-background-black-ter has-text-white-ter">
+            <h2 class="title is-4 has-text-white">Description (2)</h2>
+            <p class="content has-text-grey-lighter">
+              Texte de description du produit. Utilise les classes <em>content</em>, <em>title</em>, etc.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3–6 : SIDEBAR -->
+        <div class="column is-12-mobile is-12-tablet is-3-desktop">
+          <!-- 3 : PRIX -->
+          <div class="box stroke has-background-black-ter">
+            <nav class="level">
+              <div class="level-left">
+                <div class="level-item has-text-white">PRIX</div>
+              </div>
+              <div class="level-right">
+                <div class="level-item has-text-weight-bold has-text-white">49,90 €</div>
+              </div>
+            </nav>
+          </div>
+
+          <!-- 4 : QUANTITÉ -->
+          <div class="box stroke has-background-black-ter">
+            <div class="columns is-mobile is-vcentered">
+              <div class="column">
+                <input class="input is-dark" type="number" min="1" value="1" aria-label="Quantité">
+              </div>
+              <div class="column is-narrow">
+                <div class="buttons is-flex is-flex-direction-column">
+                  <button class="button is-dark is-small" aria-label="Augmenter">haut</button>
+                  <button class="button is-dark is-small" aria-label="Diminuer">bas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 : BOUTON / INFO -->
+          <div class="box stroke has-background-black-ter has-text-centered">
+            <button class="button is-success is-fullwidth">Ajouter au panier (5)</button>
+          </div>
+
+          <!-- 6 : CONTENU LIBRE -->
+          <div class="box stroke has-background-black-ter has-text-white-ter">
+            <strong>Bloc (6)</strong>
+            <p class="mt-2 has-text-grey-lighter">Détails, livraison, badges, etc.</p>
+          </div>
+        </div>
+
+        <!-- 7 : BANDEAU PLEINE LARGEUR -->
+        <div class="column is-12">
+          <div class="box stroke min-foot has-background-black-ter has-text-white has-text-centered">
+            Footer / Bandeau (7)
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
