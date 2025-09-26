@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="./Image exercice/eats.png">
-<title>Eats</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./Image exercice/eats.png">
+  <title>Eats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 
-
 <body class="font-sans bg-[#fafafa] text-[#333]">
-<!-- NAV FIXE -->
-<div class="nav1" role="navigation" aria-label="Navigation principale">
-<ul class="flex justify-center space-x-10 list-none p-0 m-0">
-<li>
-<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Accueil</a>
-</li>
-<li>
-<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Services</a>
-</li>
-<li>
-<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Contact</a>
-</li>
-</ul>
-</div>
+  <!-- NAV FIXE -->
+  <div class="nav1" role="navigation" aria-label="Navigation principale">
+    <ul class="flex justify-center space-x-10 list-none p-0 m-0">
+      <li>
+        <a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Accueil</a>
+      </li>
+      <li>
+        <a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Services</a>
+      </li>
+      <li>
+        <a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Contact</a>
+      </li>
+    </ul>
+  </div>
 
+  <!-- ENTÊTE -->
+  <header class="text-center p-5 bg-[#ffe082]">
+    <h1 class="font-['Archivo Black'] text-4xl mb-2">Eats</h1>
+    <img src="./Image exercice/eats.png" alt="Logo Eats" class="mx-auto w-24 h-24">
+  </header>
 
-<!-- ENTÊTE -->
-<header class="text-center p-5 bg-[#ffe082]">
-<h1 class="font-['Archivo Black'] text-4xl mb-2">Eats</h1>
-<img src="./Image exercice/eats.png" alt="Logo Eats" class="mx-auto w-24 h-24">
-</header>
+  <!-- SECTION CONTENU -->
+  <section class="p-12 bg-[#ffe082] text-center">
+    <h2 class="text-2xl font-bold mb-6">Menu:</h2>
 
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2">
+      <div class="bg-blue-600 text-white border border-black text-center p-3">Hamburgeur</div>
+      <div class="bg-white text-black border text-center p-3">Croque-m</div>
+      <div class="bg-red-600 text-white border border-black text-center p-3">Croque-N</div>
+    </div>
 
-<!-- SECTION CONTENU -->
-<section class="p-12 bg-[#ffe082] text-center">
-<h2 class="text-2xl font-bold mb-6">Menu:</h2>
+    <nav class="menu-nav flex justify-center flex-wrap gap-5 mt-6" aria-label="Menu visuel">
+      <img src="./Image exercice/eats.png" alt="Hamburgeur" title="Hamburgeur" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+      <img src="./Image exercice/eats.png" alt="Croque-m" title="Croque-m" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+      <img src="./Image exercice/eats.png" alt="Croque-N" title="Croque-N" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+    </nav>
 
+    <p class="mt-4">Cliquez sur Commande pour les Commandes Eats</p>
+  </section>
 
-<div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2">
-<div class="bg-blue-600 text-white border border-black text-center p-3">Hamburgeur</div>
-<div class="bg-white text-black border text-center p-3">Croque-m</div>
-<div class="bg-red-600 text-white border border-black text-center p-3">Croque-N</div>
-</div>
+  <!-- FORMULAIRE -->
+  <main class="text-center max-w-2xl mx-auto mt-10">
+    <h3 class="font-['Archivo Black'] text-xl mb-4">Formulaire de contact:</h3>
+    <form method="post" action="#" id="form" class="bg-[#fffde7] p-6 rounded-lg shadow-md">
+      <fieldset class="border border-gray-300 rounded-md p-4 mb-4">
+        <legend class="font-bold text-blue-600">Remplissez les informations</legend>
+        <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
+        <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
+        <input type="email" name="email" id="email" placeholder="Email" class="w-11/12 p-2 border border-gray-400 rounded-md">
+      </fieldset>
+      <fieldset class="border border-gray-300 rounded-md p-4">
+        <legend class="font-bold">Choix</legend>
+        <div class="text-left mb-3">
+          <input id="Hamburgeur" type="radio" name="choix" value="Hamburgeur" class="mr-2">
+          <label for="Hamburgeur">Hamburgeur</label>
+        </div>
+        <div class="text-left mb-3">
+          <input id="Croque-m" type="radio" name="choix" value="Croque-m" class="mr-2">
+          <label for="Croque-m">Croque-m</label>
+        </div>
+        <div class="text-left mb-3">
+          <input id="Croque-N" type="radio" name="choix" value="Croque-N" class="mr-2">
+          <label for="Croque-N">Croque-N</label>
+        </div>
+        <select name="taille" class="w-11/12 p-2 border border-gray-400 rounded-md mb-4">
+          <option value="Enfant">Enfant</option>
+          <option value="Adulte">Adulte</option>
+          <option value="Piter-pan">je ne suis pas encore certain</option>
+        </select>
+        <input type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-md cursor-pointer" value="Envoyer">
+      </fieldset>
+    </form>
+  </main>
 
-
-<nav class="menu-nav flex justify-center flex-wrap gap-5 mt-6" aria-label="Menu visuel">
-<img src="./Image exercice/eats.png" alt="Hamburgeur" title="Hamburgeur" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
-<img src="./Image exercice/eats.png" alt="Croque-m" title="Croque-m" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
-<img src="./Image exercice/eats.png" alt="Croque-N" title="Croque-N" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
-</nav>
-
-
-<p class="mt-4">Cliquez sur Commande pour les Commandes Eats</p>
-</section>
-
-
-<!-- FORMULAIRE -->
-<main class="text-center max-w-2xl mx-auto mt-10">
-<h3 class="font-['Archivo Black'] text-xl mb-4">Formulaire de contact:</h3>
-<form method="post" action="#" id="form" class="bg-[#fffde7] p-6 rounded-lg shadow-md">
-<fieldset class="border border-gray-300 rounded-md p-4 mb-4">
-<legend class="font-bold text-blue-600">Remplissez les informations</legend>
-<input type="text" name="nom" id="nom" placeholder="Entrez votre nom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
-<input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
-<input type="email" name="email" id="email" placeholder="Email" class="w-11/12 p-2 border border-gray-400 rounded-md">
-</fieldset>
-
-
+  <!-- PIED DE PAGE -->
+  <footer class="text-center p-4 bg-[#ffe082] mt-10">
+    <a href="#" class="mx-2 font-bold text-[#333]">X</a>
+    <a href="#" class="mx-2 font-bold text-[#333]">Yt</a>
+  </footer>
+</body>
 </html>
