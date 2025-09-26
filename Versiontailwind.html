@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" type="image/png" href="./Image exercice/eats.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="./Image exercice/eats.png">
 <title>Eats</title>
-
-
-<!-- Tailwind CDN (pour un exercice/maquette). En prod, préférez compiler Tailwind. -->
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-// Palette légère pour l'exemple
-tailwind.config = {
-theme: {
-extend: {
-fontFamily: {
-display: ['Archivo Black', 'ui-sans-serif', 'system-ui'],
-},
-},
-},
-};
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 
 
-<body class="min-h-screen bg-slate-50 text-slate-800">
+<body class="font-sans bg-[#fafafa] text-[#333]">
 <!-- NAV FIXE -->
-<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-slate-200" role="navigation" aria-label="Navigation principale">
-<div class="max-w-5xl mx-auto px-4">
-<ul class="flex items-center gap-6 py-3 text-sm font-medium">
+<div class="nav1" role="navigation" aria-label="Navigation principale">
+<ul class="flex justify-center space-x-10 list-none p-0 m-0">
 <li>
-<a href="#" class="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900">
-<span>Accueil</span>
-<!-- Icône curseur -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M8.7 3.3a1 1 0 0 0-1.9.5v16.4a1 1 0 0 0 1.8.6l3.3-4.6 4.7 3.6a1 1 0 0 0 1.6-.8V4.3a1 1 0 0 0-1.6-.9L8.7 7.5V3.3z"/></svg>
-</a>
+<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Accueil</a>
 </li>
 <li>
-<a href="#services" class="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900">
-<span>Services</span>
-<!-- Icône emoji (larme) stylisé -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2C6.5 2 2 6 2 10.5S6.5 19 12 19s10-3.5 10-8.5S17.5 2 12 2zm-3.5 8a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0zm6 0a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0zm-5.1 4.5c1.2.8 2.6 1.2 4.6 1.2s3.4-.4 4.6-1.2c.3-.2.7 0 .7.3c0 2.2-2.4 4.2-5.3 4.2s-5.3-2-5.3-4.2c0-.3.4-.5.7-.3z"/></svg>
-</a>
+<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Services</a>
 </li>
 <li>
-<a href="#contact" class="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900">
-<span>Contact</span>
-<!-- Icône "discord" simplifiée -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M20 4a18 18 0 0 0-4.4-1l-.2.4a15 15 0 0 1 3.6 1.2a13 13 0 0 0-11.9 0A15 15 0 0 1 10.7 3l-.2-.4A18 18 0 0 0 6 4C2.8 8.7 2 13.2 2 17.6a18 18 0 0 0 5.6 2.8l.8-1.3c-.9-.3-1.8-.7-2.6-1.2l.4-.3a13 13 0 0 0 12 0l.4.3c-.8.5-1.7.9-2.6 1.2l.8 1.3A18 18 0 0 0 22 17.6C22 13.2 21.2 8.7 18 4Zm-9.8 10c-.9 0-1.7-.8-1.7-1.8s.8-1.8 1.7-1.8s1.7.8 1.7 1.8s-.8 1.8-1.7 1.8Zm7.6 0c-.9 0-1.7-.8-1.7-1.8s.8-1.8 1.7-1.8s1.7.8 1.7 1.8s-.8 1.8-1.7 1.8Z"/></svg>
-</a>
+<a href="#" class="text-white text-lg relative pb-1 hover:text-orange-500 transition-colors">Contact</a>
 </li>
 </ul>
 </div>
-</nav>
 
 
 <!-- ENTÊTE -->
-<header class="pt-24 text-center">
-<h1 class="font-display text-5xl tracking-tight">Eats</h1>
-<img src="./Image exercice/eats.png" alt="Logo Eats" class="mx-auto mt-4 h-24 w-24 object-contain" />
+<header class="text-center p-5 bg-[#ffe082]">
+<h1 class="font-['Archivo Black'] text-4xl mb-2">Eats</h1>
+<img src="./Image exercice/eats.png" alt="Logo Eats" class="mx-auto w-24 h-24">
 </header>
 
 
 <!-- SECTION CONTENU -->
-<section class="max-w-5xl mx-auto px-4 mt-12" id="services">
-<h2 class="text-2xl font-bold mb-4">Menu&nbsp;:</h2>
+<section class="p-12 bg-[#ffe082] text-center">
+<h2 class="text-2xl font-bold mb-6">Menu:</h2>
 
 
-<!-- Grille de 3 éléments -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="bg-blue-600 text-white border border-black text-center p-3">Hamburgeur</div>
+<div class="bg-white text-black border text-center p-3">Croque-m</div>
+<div class="bg-red-600 text-white border border-black text-center p-3">Croque-N</div>
+</div>
+
+
+<nav class="menu-nav flex justify-center flex-wrap gap-5 mt-6" aria-label="Menu visuel">
+<img src="./Image exercice/eats.png" alt="Hamburgeur" title="Hamburgeur" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+<img src="./Image exercice/eats.png" alt="Croque-m" title="Croque-m" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+<img src="./Image exercice/eats.png" alt="Croque-N" title="Croque-N" class="w-32 h-auto rounded-lg hover:scale-105 transition-transform duration-300">
+</nav>
+
+
+<p class="mt-4">Cliquez sur Commande pour les Commandes Eats</p>
+</section>
+
+
+<!-- FORMULAIRE -->
+<main class="text-center max-w-2xl mx-auto mt-10">
+<h3 class="font-['Archivo Black'] text-xl mb-4">Formulaire de contact:</h3>
+<form method="post" action="#" id="form" class="bg-[#fffde7] p-6 rounded-lg shadow-md">
+<fieldset class="border border-gray-300 rounded-md p-4 mb-4">
+<legend class="font-bold text-blue-600">Remplissez les informations</legend>
+<input type="text" name="nom" id="nom" placeholder="Entrez votre nom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
+<input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom" class="w-11/12 p-2 border border-gray-400 rounded-md mb-3">
+<input type="email" name="email" id="email" placeholder="Email" class="w-11/12 p-2 border border-gray-400 rounded-md">
+</fieldset>
+
+
+</html>
