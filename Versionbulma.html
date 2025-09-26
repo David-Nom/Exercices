@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><!--En tête-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./Image exercice/eats.png"><!--Icone-->
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Bootstrap Icons peut rester si tu utilises les icônes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./ExerciceCSS.23.09.2025.css"><!--Chemin direction -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--Google police-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Tint&family=Honk&display=swap" rel="stylesheet">
+  <title>Eats</title><!--titre page-->
+</head>
+
+<body>
+  <!-- NAV FIXE -->
+  <div class="nav1" role="navigation" aria-label="Navigation principale">
+    <ul>
+      <li>
+        <a href="#">
+          Accueil <i class="bi bi-cursor"></i><!--acceuil-->
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Services <i class="bi bi-emoji-tear-fill"></i> <!--services-->
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Contact <i class="bi bi-discord"></i>
+         <!--contact-->
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ENTÊTE -->
+  <header class="has-text-centered"><!--bulma-->
+    <h1 class="title is-1">Eats</h1>
+    <img src="./Image exercice/eats.png" alt="Logo Eats">
+  </header>
+
+  <!-- SECTION CONTENU -->
+  <section>
+    <h2 class="card-content Police">Menu:</h2><!--Bulma-->
+
+    <div class="container"><!--Bulma-->
+      <div class="columns is-variable is-2">
+        <div class="column has-background-primary has-text-white has-text-centered">Hamburgeur</div>
+        <div class="column has-background-light has-text-dark has-text-centered">Croque-m</div>
+        <div class="column has-background-danger has-text-white has-text-centered">Croque-N</div>
+      </div>
+    </div>
+
+    <nav class="menu-nav has-text-centered" ><!--bulma-->
+      <img src="./Image exercice/eats.png" alt="Hamburgeur" title="Hamburgeur">
+      <img src="./Image exercice/eats.png" alt="Croque-m" title="Croque-m">
+      <img src="./Image exercice/eats.png" alt="Croque-N" title="Croque-N">
+    </nav>
+
+    <p class="has-text-centered">Clicker sur Commande pour les Commandes Eats</p>aria-label="Menu visuel"
+  </section>
+
+  <!-- FORMULAIRE Bulma-->
+  <main class="has-text-centered">
+    <h3 class="Police title is-4">Formulaire de contact:</h3>
+    <form method="post" action="#" id="form" class="is-flex is-justify-content-center is-align-items-center">
+      <fieldset>
+        <legend class="has-text-primary has-text-centered">Remplissez les informations</legend>
+
+        <input type="text" name="nom" id="nom" placeholder="Entrez votre nom">
+        <br><br>
+
+        <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom">
+        <br><br>
+
+        <input type="email" name="email" id="email" placeholder="Email">
+      </fieldset>
+
+      <fieldset>
+        <legend>Choix</legend>
+
+        <input id="Hamburgeur" type="radio" name="choix" value="Hamburgeur">
+        <label for="Hamburgeur">Hamburgeur</label>
+        <br>
+
+        <input id="Croque-m" type="radio" name="choix" value="Croque-m">
+        <label for="Croque-m">Croque-m</label>
+        <br>
+
+        <input id="Croque-N" type="radio" name="choix" value="Croque-N">
+        <label for="Croque-N">Croque-N</label>
+        <br><br>
+
+        <select class="has-text-centered" name="taille">
+          <option value="Enfant">Enfant</option>
+          <option value="Adulte">Adulte</option>
+          <option value="Piter-pan">je ne suis pas encore certain</option>
+        </select>
+
+        <br><br>
+        <input type="submit" class="button is-success" value="Envoyer">
+      </fieldset>
+    </form>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer>
+    <!--lien redirectionel-->
+    <a href="">X</a>
+    <a href="">Yt</a>
+  </footer>
+
+</body>
+</html>
